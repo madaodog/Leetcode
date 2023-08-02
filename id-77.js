@@ -15,7 +15,7 @@ var combine = function(n, k) {
 
 var backtracking = (combination, start, maxLength, numbers, allCombinations) => {
     if(combination.length === maxLength) {
-        allCombinations.push([...combination]);
+        allCombinations.push(combination.slice());
     }
 
     for(let i=start;i < numbers+1;i++) {
